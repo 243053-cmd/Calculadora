@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Separables{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <div>
+    <h4 class="mb-0">Resolver por separables</h4>
+    <div class="text-muted">Forma típica: dy/dx = f(x)g(y)</div>
+  </div>
+  <a class="btn btn-outline-secondary btn-clean" href="/">← Volver</a>
+</div>
+
+<div class="card card-clean">
+  <div class="card-body p-4 p-md-5">
+    <form action="/solve/separable" method="POST">
+      <label class="form-label">Ecuación</label>
+      <textarea class="form-control input-clean" name="equation" rows="3" required></textarea>
+
+      <button class="btn btn-primary btn-clean mt-3" type="submit">Resolver</button>
+
+      <div class="hint mt-4">
+        <div class="fw-semibold mb-2">Ejemplos que puede resolver</div>
+        <ul class="mb-0">
+          <li class="mono">dy/dx = x*y</li>
+          <li class="mono">dy/dx = x^2*(y + 1)</li>
+          <li class="mono">yp = (x^2)/(y + 1)</li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

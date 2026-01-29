@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="hero-screen">
+  <div class="hero-card">
+    <h1 class="hero-title">Calculadora de Ecuaciones Diferenciales</h1>
+    <div class="hero-subtitle">Método a utilizar:</div>
+
+    <div class="hero-actions">
+      <a href="/exact" class="btn hero-btn">Exactas</a>
+      <a href="/separable" class="btn hero-btn">Separables</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

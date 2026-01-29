@@ -1,0 +1,192 @@
+:root{
+  --text: #0f172a;
+  --muted: #475569;
+}
+
+/* Fondo azul como tu home */
+body{
+  background: #0b5c8e;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Layout */
+.page-wrap{
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Navbar simple */
+.nav-clean{
+  background: transparent;
+  border-bottom: 0;
+}
+
+.navbar .navbar-brand{
+  color: white !important;
+}
+
+.badge-soft{
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.text-muted{
+  color: rgba(255,255,255,0.75) !important;
+}
+
+/* HOME: pantalla central */
+.hero-screen{
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+}
+
+.hero-card{
+  width: min(980px, 92vw);
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 56px 28px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+  text-align: center;
+}
+
+.hero-title{
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 48px;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle{
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 22px;
+}
+
+.hero-actions{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-btn{
+  background: #0b5c8e;
+  color: white;
+  border-radius: 18px;
+  padding: 18px 26px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  width: 220px;
+  border: none;
+  box-shadow: 0 10px 18px rgba(11, 92, 142, 0.22);
+}
+
+.hero-btn:hover{
+  filter: brightness(0.95);
+  color: white;
+}
+
+/* Otras pantallas: tarjeta */
+.card-clean{
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Inputs */
+.input-clean{
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 12px 12px;
+}
+
+.input-clean::placeholder{
+  color: #94a3b8;
+}
+
+.input-clean:focus{
+  background: #ffffff;
+  border-color: rgba(11, 92, 142, 0.65);
+  box-shadow: 0 0 0 0.2rem rgba(11, 92, 142, 0.15);
+}
+
+/* Botones */
+.btn-clean{
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.btn-primary{
+  background: #0b5c8e;
+  border: 0;
+}
+
+.btn-primary:hover{
+  filter: brightness(0.95);
+}
+
+.btn-outline-secondary{
+  border-color: rgba(255,255,255,0.7);
+  color: white;
+  background: transparent;
+}
+
+.btn-outline-secondary:hover{
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+/* Caja de ayuda */
+.hint{
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  padding: 12px;
+  color: #475569;
+}
+
+.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Alert */
+.alert-clean{
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #7f1d1d;
+  border-radius: 16px;
+}
+
+/* Math box */
+.math-box{
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.steps{
+  color: #475569;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.math-inline{
+  color: #0f172a;
+}

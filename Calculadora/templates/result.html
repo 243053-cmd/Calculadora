@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Resultado{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <div>
+    <h4 class="mb-0">Resultado</h4>
+    {% if ok %}
+      <div class="text-muted">Método: {{ method }}</div>
+    {% endif %}
+  </div>
+  <a class="btn btn-outline-secondary btn-clean" href="/">← Inicio</a>
+</div>
+
+{% if not ok %}
+  <div class="alert alert-danger alert-clean">
+    <div class="fw-semibold mb-1">¡Ups! Algo fallo</div>
+    <div>{{ error }}</div>
+  </div>
+
+  <div class="card card-clean mt-4">
+    <div class="card-body p-4">
+      <h6 class="mb-2">Pasos</h6>
+      <div class="text-muted">Sin pasos disponibles.</div>
+    </div>
+  </div>
+{% else %}
+  <div class="card card-clean">
+    <div class="card-body p-4">
+      <div class="text-muted mb-2">Solución (implícita):</div>
+      <div class="math-box">
+        \( {{ solution }} \)
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-clean mt-4">
+    <div class="card-body p-4">
+      <h6 class="mb-3">Pasos</h6>
+      {% if steps and steps|length > 0 %}
+        <ol class="steps">
+          {% for s in steps %}
+            <li class="mb-2">
+              <div class="math-inline">{{ s|safe }}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <div class="text-muted">Sin pasos disponibles.</div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

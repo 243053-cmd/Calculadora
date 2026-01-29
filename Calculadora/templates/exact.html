@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Exactas{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <div>
+    <h4 class="mb-0">Resolver por exactas</h4>
+    <div class="text-muted">Forma típica: M*dx + N*dy = 0</div>
+  </div>
+  <a class="btn btn-outline-secondary btn-clean" href="/">← Volver</a>
+</div>
+
+<div class="card card-clean">
+  <div class="card-body p-4 p-md-5">
+    <form action="/solve/exact" method="POST">
+      <label class="form-label">Ecuación</label>
+      <textarea class="form-control input-clean" name="equation" rows="3" required></textarea>
+
+      <button class="btn btn-primary btn-clean mt-3" type="submit">Resolver</button>
+
+      <div class="hint mt-4">
+        <div class="fw-semibold mb-2">Ejemplos que puede resolver</div>
+        <ul class="mb-0">
+          <li class="mono">(2*x*y + y^2)dx + (x^2 + 2*x*y)dy = 0</li>
+          <li class="mono">(x + y)dx + (x + y)dy = 0</li>
+          <li class="mono">(x^2 + y)dx + (x + 1)dy = 0</li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
